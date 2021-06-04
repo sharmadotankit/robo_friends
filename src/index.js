@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import 'tachyons';
-import App from './Component/App';
+import App from './Containers/App';
 
 
 ReactDOM.render(
