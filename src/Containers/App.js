@@ -1,7 +1,8 @@
 import {Component} from 'react';
 import CardArray from '../Component/CardArray';
 import SearchField from '../Component/SearchField';
-import Scroll from '../Component/Scroll'
+import Scroll from '../Component/Scroll';
+import ErrorBoundry from '../Component/ErrorBoundry'
 import './App.css';
 
 class App extends Component{
@@ -38,7 +39,9 @@ class App extends Component{
 				<SearchField searchChange={this.onSearchFieldChange}/>
 				<br/>
 				<Scroll>
-				<CardArray robots={filteredRobots}/>
+					<ErrorBoundry>
+						<CardArray robots={filteredRobots}/>
+					</ErrorBoundry>
 				</Scroll>
 			</div>
 		);	
